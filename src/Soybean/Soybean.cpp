@@ -29,10 +29,8 @@ unsigned long millisBefore = 0;
 // Create instances of the motor and encoder containers
 motors::Container motorContainer{};
 
-Encoder frontLeftEncoder(pin::FRONT_LEFT_WHEEL_ENCODER_PIN1, pin::FRONT_LEFT_WHEEL_ENCODER_PIN2);
-Encoder frontRightEncoder(pin::FRONT_RIGHT_WHEEL_ENCODER_PIN1, pin::FRONT_RIGHT_WHEEL_ENCODER_PIN2);
-Encoder rearLeftEncoder(pin::REAR_LEFT_ENCODER_PIN1, pin::REAR_LEFT_ENCODER_PIN2);
-Encoder rearRightEncoder(pin::REAR_RIGHT_ENCODER_PIN1, pin::REAR_RIGHT_ENCODER_PIN2);
+Encoder frontLeftEncoder(pin::RIGHT_WHEEL_ENCODER_PIN1, pin::RIGHT_WHEEL_ENCODER_PIN2);
+
 
 void setup() {
     // For the serial communication from RPi to Arduino
@@ -40,18 +38,10 @@ void setup() {
     
     // Set up motors using pin definitions from PinDefinitions.h
     // All motors are initialized to the STOP (90) value as a safety measure
-    motors::Setup(pin::DIGGING_MOTOR, motorContainer.digMotor, STOP);
-    motors::Setup(pin::DIGGING_ACTUATOR, motorContainer.actuator, STOP);
-    motors::Setup(pin::DEPOSIT_MOTOR, motorContainer.auger, STOP);
-    motors::Setup(pin::DEPOSIT_VIBRATOR, motorContainer.vibrator, STOP);
+    motors::Setup(pin::ARM_MOTOR, motorContainer.armMotor, STOP);
     motors::Setup(pin::LEFT_MOTOR, motorContainer.driveMotor1, STOP);
     motors::Setup(pin::RIGHT_MOTOR, motorContainer.driveMotor2, STOP);
 
-    // Set up camera servos
-    // Note: These are initializaed to sepcific positions other than STOP
-    motors::Setup(pin::HORIZONTAL_SERVO, motorContainer.horizontalServo, 180);
-    motors::Setup(pin::VERTICAL_SERVO, motorContainer.verticalServo, 90);
-    motors::Setup(pin::ARM_SERVO, motorContainer.armServo, 0);
 }
 
 void loop() {

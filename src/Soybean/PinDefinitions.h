@@ -25,33 +25,16 @@ namespace pin{
     */
 
     // Drive motor pins
-    constexpr uint8_t LEFT_MOTOR = 4;           // Pin for the left motors
-    constexpr uint8_t RIGHT_MOTOR = 11;         // Pin for the right motors
+    constexpr uint8_t LEFT_MOTOR = 4;           // Pin for the left motor
+    constexpr uint8_t RIGHT_MOTOR = 11;         // Pin for the right motor
 
-    // Digging mechanism pins
-    constexpr uint8_t DIGGING_MOTOR = 6;        // Pin for the digging motor
-    constexpr uint8_t DIGGING_ACTUATOR = 10;    // Pin for the digging actuator
-
-    // Deposit system pins
-    constexpr uint8_t DEPOSIT_MOTOR = 5;        // Pin for the deposit motor
-    constexpr uint8_t DEPOSIT_VIBRATOR = 9;     // Pin for the deposit vibrator
-
-    // Camera servo pins
-    constexpr uint8_t HORIZONTAL_SERVO = 7;     // Pin for the horizontal camera servo
-    constexpr uint8_t VERTICAL_SERVO = 8;       // Pin for the vertical camera servo
-    constexpr uint8_t ARM_SERVO = 13;           // Pin for the arm servo
-
+   // Arm Motor
+   constexpr uint8_t ARM_MOTOR = 12;
 
     // Encoder pins
     // Note: These are placeholder values and should be updated with the actual pin numbers
-    constexpr uint8_t FRONT_RIGHT_WHEEL_ENCODER_PIN1 = 2;
-    constexpr uint8_t FRONT_RIGHT_WHEEL_ENCODER_PIN2 = 3;
-    constexpr uint8_t FRONT_LEFT_WHEEL_ENCODER_PIN1 = 0;
-    constexpr uint8_t FRONT_LEFT_WHEEL_ENCODER_PIN2 = 0;
-    constexpr uint8_t REAR_RIGHT_ENCODER_PIN1 = 0;
-    constexpr uint8_t REAR_RIGHT_ENCODER_PIN2 = 0;
-    constexpr uint8_t REAR_LEFT_ENCODER_PIN1 = 0;
-    constexpr uint8_t REAR_LEFT_ENCODER_PIN2 = 0;
+    constexpr uint8_t RIGHT_WHEEL_ENCODER_PIN1 = 2;
+    constexpr uint8_t RIGHT_WHEEL_ENCODER_PIN2 = 3;
 }
 
 #endif //PinDefinitions_h

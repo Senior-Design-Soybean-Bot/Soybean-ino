@@ -24,16 +24,10 @@ namespace motors {
     * This structure centralizes all motor and servo objects for easy access
     */
     struct Container {
-        Servo digMotor;         // Motor for the digging mechanism
-        Servo actuator;         // Actuator for the digging mechanism
-        Servo auger;            // Motor for the deposit system
-        Servo vibrator;         // Motor for the deposit vibrator
         Servo driveMotor1;      // Left drive motor
         Servo driveMotor2;      // Right drive motor
 
-        Servo horizontalServo;  // Servo for the horizontal camera servo
-        Servo verticalServo;    // Servo for the vertical camera servo
-        Servo armServo;         // Servo for the arm servo
+        Servo armMotor;
     };
 
     /*

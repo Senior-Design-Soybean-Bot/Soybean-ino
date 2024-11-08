@@ -90,7 +90,7 @@ namespace comm {
 
         // Parse param2 if it exists
         if (tokens[2] != nullptr) {
-            if (cmd == MOVEMENT || cmd == DIGBELT || cmd == HORIZONTAL || cmd == VERTICAL || cmd == ARM) {
+            if (cmd == MOVEMENT || cmd == ARM) {
                 param2 = atoi(tokens[2]);
             }
             else {
@@ -103,67 +103,9 @@ namespace comm {
             case MOVEMENT:
                 motors::drive(param1, param2, motorContainer.driveMotor1, motorContainer.driveMotor2);
                 break;
-            case DIGBELT:
-                if (param1) {
-                    motors::Set(motorContainer.digMotor, param2);
-                }
-                else {
-                    motors::Stop(motorContainer.digMotor);
-                }
-                break;
-            case DIGACT:
-                if (param1) {
-                    if (param2 == 'r')
-                    {
-                        motors::Forward(motorContainer.actuator);
-                    }
-                    else if (param2 == 'l')
-                    {
-                        motors::Backward(motorContainer.actuator);
-                    }                
-                }
-                else {
-                    motors::Stop(motorContainer.actuator);
-                }
-                break;
-            case DEPOSITAUGER:
-                if (param1) {
-                    if (param2 == 'f') {
-                        motors::Forward(motorContainer.auger);
-                    }
-                    else if (param2 == 'b')
-                    {
-                        motors::Backward(motorContainer.auger);
-                    }
-                    
-                }
-                else {
-                    motors::Stop(motorContainer.auger);
-                }
-                break;
-            case VIBRATOR:
-                if (param1) {
-                    if (param2 == 'v'){
-                        motors::Forward(motorContainer.vibrator);
-                    }
-                }
-                else {
-                    motors::Stop(motorContainer.vibrator);
-                }
-                break;
-            case HORIZONTAL:
-                if (param1) {
-                    motors::Set(motorContainer.horizontalServo, param2); // This is the function that will be called to move the horizontal servo
-                }
-                break;
-            case VERTICAL:
-                if (param1) {
-                    motors::Set(motorContainer.verticalServo, param2); // This is the function that will be called to move the vertical servo
-                }
-                break;
             case ARM:
                 if (param1) {
-                    motors::Set(motorContainer.armServo, param2); // This is the function that will be called to move the arm servo
+                    motors::Set(motorContainer.armMotor, param2); // This is the function that will be called to move the arm servo
                 }
                 break;
             default:
