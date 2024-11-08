@@ -14,7 +14,7 @@
 
 // Include all necessary libraries
 #include <stdint.h>
-#include <ESP32Servo.h>
+#include <Servo.h>
 #include <Arduino.h>
 
 // Define a namespace 'motors' to encapsulate all motor functions

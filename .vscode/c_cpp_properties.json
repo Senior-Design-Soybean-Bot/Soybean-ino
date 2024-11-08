@@ -10,7 +10,10 @@
             "includePath": [
                 "D:/Github/Soybean-ino/include",
                 "D:/Github/Soybean-ino/src",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Wire",
                 "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Servo/src",
+                "D:/Github/Soybean-ino/.pio/libdeps/adafruit_qt_py_m0/Encoder",
+                "D:/Github/Soybean-ino/.pio/libdeps/adafruit_qt_py_m0/Encoder/utility",
                 "C:/Users/kschw/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
                 "C:/Users/kschw/.platformio/packages/framework-cmsis-atmel/CMSIS/Device/ATMEL",
                 "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino",
@@ -26,7 +29,6 @@
                 "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SDU/src",
                 "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SPI",
                 "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/USBHost/src",
-                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Wire",
                 ""
             ],
             "browse": {
@@ -34,7 +36,10 @@
                 "path": [
                     "D:/Github/Soybean-ino/include",
                     "D:/Github/Soybean-ino/src",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Wire",
                     "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Servo/src",
+                    "D:/Github/Soybean-ino/.pio/libdeps/adafruit_qt_py_m0/Encoder",
+                    "D:/Github/Soybean-ino/.pio/libdeps/adafruit_qt_py_m0/Encoder/utility",
                     "C:/Users/kschw/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
                     "C:/Users/kschw/.platformio/packages/framework-cmsis-atmel/CMSIS/Device/ATMEL",
                     "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino",
@@ -50,7 +55,6 @@
                     "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SDU/src",
                     "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SPI",
                     "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/USBHost/src",
-                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Wire",
                     ""
                 ]
             },

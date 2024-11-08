@@ -6,20 +6,15 @@
 #ifndef Encoders_h
 #define Encoders_h
 
-#include <ESP32Encoder.h>
+#include <Encoder.h>
 #include <Arduino.h>
 
 namespace encoders {
-    struct Container {
-        ESP32Encoder fl_encoder;
-        ESP32Encoder fr_encoder;
-        ESP32Encoder rl_encoder;
-        ESP32Encoder rr_encoder;
-    };
+    int readEncoder(Encoder &enc);
+    float getRPM(Encoder &e);
 
-    void setupEncoder(uint8_t fl_pin_1, uint8_t fl_pin_2, ESP32Encoder &encoder);
-    int readEncoder(ESP32Encoder enc);
-    float getRPM(ESP32Encoder e);
+    constexpr int PPR = 600;
+    constexpr uint8_t CV = 4;
 }
 
 #endif // Encoders_h
