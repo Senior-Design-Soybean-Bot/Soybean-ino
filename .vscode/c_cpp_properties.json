@@ -1,0 +1,87 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "D:/Github/Soybean-ino/include",
+                "D:/Github/Soybean-ino/src",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Servo/src",
+                "C:/Users/kschw/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
+                "C:/Users/kschw/.platformio/packages/framework-cmsis-atmel/CMSIS/Device/ATMEL",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Adafruit_TinyUSB_Arduino/src/arduino",
+                "C:/Users/kschw/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/variants/qtpy_m0",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Adafruit_TinyUSB_Arduino/src",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Adafruit_ZeroDMA",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/CI_Tests",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/HID",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/I2S/src",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SAMD_AnalogCorrection/src",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SDU/src",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SPI",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/USBHost/src",
+                "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Wire",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "D:/Github/Soybean-ino/include",
+                    "D:/Github/Soybean-ino/src",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Servo/src",
+                    "C:/Users/kschw/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
+                    "C:/Users/kschw/.platformio/packages/framework-cmsis-atmel/CMSIS/Device/ATMEL",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Adafruit_TinyUSB_Arduino/src/arduino",
+                    "C:/Users/kschw/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/variants/qtpy_m0",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Adafruit_TinyUSB_Arduino/src",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Adafruit_ZeroDMA",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/CI_Tests",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/HID",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/I2S/src",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SAMD_AnalogCorrection/src",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SDU/src",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/SPI",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/USBHost/src",
+                    "C:/Users/kschw/.platformio/packages/framework-arduino-samd-adafruit/libraries/Wire",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60116",
+                "ARDUINO_QTPY_M0",
+                "CRYSTALLESS",
+                "ADAFRUIT_QTPY_M0",
+                "__SAMD21E18A__",
+                "ARM_MATH_CM0PLUS",
+                "ARDUINO=10805",
+                "F_CPU=48000000L",
+                "USBCON",
+                "USB_VID=0x239A",
+                "USB_PID=0x80CB",
+                "USB_PRODUCT=\"QT Py M0\"",
+                "USB_MANUFACTURER=\"Adafruit\"",
+                "ARDUINO_ARCH_SAMD",
+                "USB_CONFIG_POWER=100",
+                "ARDUINO_SAMD_ADAFRUIT",
+                ""
+            ],
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++11",
+            "compilerPath": "C:/Users/kschw/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-mcpu=cortex-m0plus",
+                "-mthumb",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
