@@ -12,11 +12,10 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "D:/Github/Soybean-ino/.pio/build/seeed_wio_terminal/firmware.elf",
-            "projectEnvName": "seeed_wio_terminal",
-            "toolchainBinDir": "C:/Users/kschw/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin",
+            "executable": "D:/Github/Soybean-ino/.pio/build/uno/firmware.elf",
+            "projectEnvName": "uno",
+            "toolchainBinDir": "C:/Users/kschw/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart",
-            "svdPath": "C:/Users/kschw/.platformio/platforms/atmelsam/misc/svd/ATSAMD51P19A.svd",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
@@ -26,21 +25,19 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "D:/Github/Soybean-ino/.pio/build/seeed_wio_terminal/firmware.elf",
-            "projectEnvName": "seeed_wio_terminal",
-            "toolchainBinDir": "C:/Users/kschw/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin",
-            "internalConsoleOptions": "openOnSessionStart",
-            "svdPath": "C:/Users/kschw/.platformio/platforms/atmelsam/misc/svd/ATSAMD51P19A.svd"
+            "executable": "D:/Github/Soybean-ino/.pio/build/uno/firmware.elf",
+            "projectEnvName": "uno",
+            "toolchainBinDir": "C:/Users/kschw/.platformio/packages/toolchain-atmelavr/bin",
+            "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
-            "executable": "D:/Github/Soybean-ino/.pio/build/seeed_wio_terminal/firmware.elf",
-            "projectEnvName": "seeed_wio_terminal",
-            "toolchainBinDir": "C:/Users/kschw/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin",
+            "executable": "D:/Github/Soybean-ino/.pio/build/uno/firmware.elf",
+            "projectEnvName": "uno",
+            "toolchainBinDir": "C:/Users/kschw/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart",
-            "svdPath": "C:/Users/kschw/.platformio/platforms/atmelsam/misc/svd/ATSAMD51P19A.svd",
             "loadMode": "manual"
         }
     ]

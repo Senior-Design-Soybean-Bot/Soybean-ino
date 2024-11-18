@@ -23,7 +23,7 @@ namespace comm {
 
     void i2cSetup(motors::Container& container) {
         g_motorContainer = &container;
-        Wire.begin(pin::I2C_ADDRESS, pin::I2C_SDA);
+        Wire.begin(pin::I2C_ADDRESS);
         Wire.onReceive(receiveEvent);
     }
 
