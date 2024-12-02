@@ -10,11 +10,13 @@
 #include <Arduino.h>
 
 namespace encoders {
-    int readEncoder(Encoder &enc);
-    float getRPM(Encoder &e);
+    struct Container {
+        Encoder encoder1;
+    };
 
-    constexpr int PPR = 600;
-    constexpr uint8_t CV = 4;
+    void setupEncoder(uint8_t pin_1, uint8_t pin_2, Encoder& encoder);
+    long readEncoder(Encoder& enc);
+    float getRPM(Encoder& enc);
 }
 
 #endif // Encoders_h

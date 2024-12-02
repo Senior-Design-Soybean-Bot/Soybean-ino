@@ -26,8 +26,7 @@ namespace motors {
     struct Container {
         Servo driveMotor1;      // Left drive motor
         Servo driveMotor2;      // Right drive motor
-
-        Servo armMotor;
+        Servo armMotor;         // Servo for the arm servo
     };
 
     /*

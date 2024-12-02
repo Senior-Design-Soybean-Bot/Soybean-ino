@@ -13,7 +13,6 @@
 
 // Define a namespace 'pin' to encapsulate all pin definitions
 namespace pin{
-    constexpr uint8_t I2C_ADDRESS = 0x04;
     /*
     * Pin definitions for the motor controllers and other components
     * connected to the output pins of the microcontroller
@@ -23,16 +22,11 @@ namespace pin{
     */
 
     // Drive motor pins
-    constexpr uint8_t LEFT_MOTOR = 4;           // Pin for the left motor
-    constexpr uint8_t RIGHT_MOTOR = 11;         // Pin for the right motor
-
-   // Arm Motor
-   constexpr uint8_t ARM_MOTOR = 12;
-
-    // Encoder pins
-    // Note: These are placeholder values and should be updated with the actual pin numbers
-    constexpr uint8_t RIGHT_WHEEL_ENCODER_PIN1 = 2;
-    constexpr uint8_t RIGHT_WHEEL_ENCODER_PIN2 = 3;
+    constexpr uint8_t LEFT_MOTOR = 4;           // Pin for the left motors
+    constexpr uint8_t RIGHT_MOTOR = 11;         // Pin for the right motors
+    constexpr uint8_t ARM_MOTOR = 12;           // Pin for the arm motor
+    constexpr uint8_t RIGHT_ENCODER_PIN1 = 2;
+    constexpr uint8_t RIGHT_ENCODER_PIN2 = 3;
 }
 
 #endif //PinDefinitions_h

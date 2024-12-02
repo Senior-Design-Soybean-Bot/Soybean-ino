@@ -28,20 +28,18 @@ unsigned long millisBefore = 0;
 
 // Create instances of the motor and encoder containers
 motors::Container motorContainer{};
-
-Encoder frontLeftEncoder(pin::RIGHT_WHEEL_ENCODER_PIN1, pin::RIGHT_WHEEL_ENCODER_PIN2);
+// encoders::Container encoderContainer{};
 
 
 void setup() {
     // For the serial communication from RPi to Arduino
-    comm::i2cSetup(motorContainer);
+    Serial.begin(9600);
     
     // Set up motors using pin definitions from PinDefinitions.h
     // All motors are initialized to the STOP (90) value as a safety measure
     motors::Setup(pin::ARM_MOTOR, motorContainer.armMotor, STOP);
     motors::Setup(pin::LEFT_MOTOR, motorContainer.driveMotor1, STOP);
     motors::Setup(pin::RIGHT_MOTOR, motorContainer.driveMotor2, STOP);
-
 }
 
 void loop() {
@@ -72,12 +70,17 @@ void loop() {
         // 'h' - Horizontal Camera Servo, 'e' - Vertical Camera Servo, 'a' - Arm Servo
         comm::Process(tokens, motorContainer);
     }
-    
-    // if (millis() - millisBefore > 1000){
-    //     float fl_rpm = encoders::getRPM(frontLeftEncoder);
-    //     float fr_rpm = encoders::getRPM(frontRightEncoder);
-    //     float rl_rpm = encoders::getRPM(rearLeftEncoder);
-    //     float rr_rpm = encoders::getRPM(rearRightEncoder);
+
+    // Encoder reading code
+    // readEncoder(fr_encoder);
+    // readEncoder(fl_encoder);
+    // readEncoder(rr_encoder);
+    // readEncoder(rl_encoder);
+    // if (millis() - millisBefore > 1000) {
+    //     getRPM(fr_encoder);
+    //     getRPM(fl_encoder);
+    //     getRPM(rr_encoder);
+    //     getRPM(rl_encoder);
     //     millisBefore = millis();
     // }
 }

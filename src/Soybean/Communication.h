@@ -13,7 +13,6 @@
 #define Communication_h
 
 // Include custom header files
-#include <Wire.h>               // Required for I2C communication
 #include "PinDefinitions.h"     // Holds all of the pin definitions for output signals
 #include "Motors.h"             // Contains motor-related functions
 #include "Encoders.h"           // Contains functions for reading encoder values
@@ -21,18 +20,16 @@
 
 // Define a namespace 'comm' to encapsulate all communication functions
 namespace comm{
-    // Constants
-    constexpr uint8_t MAX_INPUT_LENGTH = 50;
-    constexpr uint8_t MAX_ARRAY_SIZE = 10;
-
-    // Command characters
-    constexpr char MOVEMENT = 'm';
-    constexpr char ARM = 'a';
-
-    void i2cSetup(motors::Container& container);
-    void Process(char* tokens[], motors::Container& motorContainer);
-    bool hasNewData();
-    void clearNewDataFlag();
+    /*
+    * Process function declaration
+    * 
+    * @param tokens An array of char pointers containing the parsed command tokens
+    * @param motorContainer A struct containing all of the motor objects
+    * 
+    * This function interprets and executes commands received from the RPi
+    * via serial communication. Allowing the RPi to communicate with the microcontroller
+    */
+    void Process(char* tokens[], motors::Container motorContainer);
 }
 
 #endif //Communication_h

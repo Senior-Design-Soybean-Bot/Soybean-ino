@@ -12,63 +12,10 @@
 #include "Communication.h"
 
 namespace comm {
-    // Static variables
-    static motors::Container* g_motorContainer = nullptr;
-    static char inputBuffer[MAX_INPUT_LENGTH + 1] = {0};
-    static volatile bool newData = false;
+    // Command character definitions for various functions
+    constexpr char MOVEMENT = 'm';
+    constexpr char ARM = 'a';
 
-    // Internal function declarations
-    static void receiveEvent(int numBytes);
-    static void processI2CData();
-
-    void i2cSetup(motors::Container& container) {
-        g_motorContainer = &container;
-        Wire.begin(pin::I2C_ADDRESS);
-        Wire.onReceive(receiveEvent);
-    }
-
-    static void receiveEvent(int numBytes) {
-        int i = 0;
-        while (Wire.available() && i < MAX_INPUT_LENGTH) {
-            char c = Wire.read();
-            if (c == '\n' || c == '\0') {
-                inputBuffer[i] = '\0';
-                newData = true;
-                break;
-            }
-            inputBuffer[i++] = c;
-        }
-        inputBuffer[i] = '\0';
-        newData = true;
-    }
-
-    static void processI2CData() {
-        char* tokens[MAX_ARRAY_SIZE] = {nullptr};
-        int numCount = 0;
-        char* token = strtok(inputBuffer, ",");
-
-        while (token != NULL && numCount < MAX_ARRAY_SIZE) {
-            tokens[numCount++] = token;
-            token = strtok(NULL, ",");
-        }
-
-        if (g_motorContainer != nullptr) {
-            Process(tokens, *g_motorContainer);
-        }
-    }
-
-    bool hasNewData() {
-        if (newData) {
-            processI2CData();
-            return true;
-        }
-        return false;
-    }
-
-    void clearNewDataFlag() {
-        newData = false;
-        memset(inputBuffer, 0, MAX_INPUT_LENGTH + 1);
-    }
     /*
     * Process function implementation
     *
@@ -78,7 +25,7 @@ namespace comm {
     * @param tokens An array of char pointers containing the parsed command tokens
     * @param motorContainer A struct containing all of the motor objects
     */
-    void Process(char* tokens[], motors::Container& motorContainer) {
+    void Process(char* tokens[], motors::Container motorContainer) {
         // Check if at least two tokens are present
         if (tokens[0] == nullptr || tokens[1] == nullptr) {
             return;
@@ -90,7 +37,7 @@ namespace comm {
 
         // Parse param2 if it exists
         if (tokens[2] != nullptr) {
-            if (cmd == MOVEMENT || cmd == ARM) {
+            if (cmd == MOVEMENT) {
                 param2 = atoi(tokens[2]);
             }
             else {
@@ -105,7 +52,17 @@ namespace comm {
                 break;
             case ARM:
                 if (param1) {
-                    motors::Set(motorContainer.armMotor, param2); // This is the function that will be called to move the arm servo
+                    if (param2 == 'u')
+                    {
+                        motors::Forward(motorContainer.armMotor);
+                    }
+                    else if (param2 == 'd')
+                    {
+                        motors::Backward(motorContainer.armMotor);
+                    }                
+                }
+                else {
+                    motors::Stop(motorContainer.armMotor);
                 }
                 break;
             default:
