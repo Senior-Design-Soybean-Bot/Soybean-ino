@@ -24,7 +24,7 @@ namespace pin{
     // Drive motor pins
     constexpr uint8_t LEFT_MOTOR = 4;           // Pin for the left motors
     constexpr uint8_t RIGHT_MOTOR = 11;         // Pin for the right motors
-    constexpr uint8_t ARM_MOTOR = 12;           // Pin for the arm motor
+    constexpr uint8_t ARM_MOTOR = 10;           // Pin for the arm motor
     constexpr uint8_t RIGHT_ENCODER_PIN1 = 2;
     constexpr uint8_t RIGHT_ENCODER_PIN2 = 3;
 }
